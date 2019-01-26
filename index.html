@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="assets/css/style.css">
+
+    <title>RPS Muliplayer</title>
+</head>
+<body>
+    <div class = "container">
+        <div class = row>
+            <div class="card col-4">
+                <div class="card-body">
+                    <h5 class="card-title">Player One</h5>
+                    <p class="card-text">Make a choice to start the game</p>
+                    <div id ="button-select-area-p1">
+                        <button id = p1-select-button value = "p1" type = "button" class = "btn btn-primary">select player 1</button>
+                    </div>
+                    <div id = "button-area-p1">
+                        <button id ="p1-button-rock" value = "rock" type = "button" class="btn btn-primary">Rock</button>
+                        <button id ="p1-button-paper" value = "paper" type = "button" class="btn btn-primary">Paper</button>
+                        <button id= "p1-button-scissors" value = "scissors" type = "button" class="btn btn-primary">Scissors</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card col-4">
+                <div class="card-body">
+                    <h5 class="card-title">Game Totals</h5>
+                    <p id = "game-text" class="card-text"></p>
+                    <p id = "player-wins" class="card-text">Player Wins: </p>
+                    <p id = "computer-wins" class="card-text">Computer Wins: </p>
+                    <p id = "ties" class="card-text">Ties: </p>
+                </div>
+            </div>
+            <div class="card col-4">
+                <div class="card-body">
+                    <h5 class="card-title">Player Two</h5>
+                    <p class="card-text">Make a choice to start the game</p>
+                    <div id ="button-select-area-p2">
+                        <button id = p2-select-button value = "p2" type = "button" class = "btn btn-primary">select player 2</button>
+                    </div>
+                    <div id ="button-area-p2">
+                        <button id ="p2-button-rock" value = "rock" type = "button" class="btn btn-primary">Rock</button>
+                        <button id ="p2-button-paper" value = "paper" type = "button" class="btn btn-primary">Paper</button>
+                        <button id= "p2-button-scissors" value = "scissors" type = "button" class="btn btn-primary">Scissors</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src = "assets/javascript/app.js"></script>
+</body>
+</html>
