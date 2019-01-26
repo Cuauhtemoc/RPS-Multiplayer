@@ -33,13 +33,31 @@ firebase.initializeApp(config);
 
 database = firebase.database();
 
+database.ref("users/player1").set(
+  playerOne);
+database.ref("users/player2").set(
+    playerOne);  
+
 function findWinner(str){
    
 };
 
-$(".btn").on("click", function(){
+$(".game-button").on("click", function(){
     console.log("here");
     findWinner($(this).val());
 });
+$("#chat-box-button").on('click', function(){
+  msg = $("#chat-box").val();
+  database.ref("chat/msgs").push({
+    msg: msg
+  })
+})
+
+database.ref("chat/msgs").on("child_added", function(snapshot){
+  msg = snapshot.val();
+  console.log(msg);
+  $("#chat-area").append("<p> MSG: " + msg.msg + "</p>");
+
+})
 $("#button-area-p1").hide();
 $("#button-area-p2").hide();
