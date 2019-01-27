@@ -194,10 +194,9 @@ database.ref("users/player2/").on("value", function(snapshot){
 //update the chat div 
 database.ref("chat/msgs").on("child_added", function(snapshot){
   msg = snapshot.val();
-  $("#chat-area").append("<p> MSG: " + msg.msg + "</p>");
+  $("#chat-area").append("<p> New mgs: " + msg.msg + "</p>");
 })
 
 //hide divs we dont need when the game starts
 $("#button-area-p1").hide();
 $("#button-area-p2").hide();
-$("#chat-area").hide();
